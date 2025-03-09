@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to LearnX</h1>
+        <button id="theme-toggle">Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+   
+    </div>
+
+    <section class="course-container">
+        <div class="course-card" onclick="showCourseDetails('html')">
+            <h2>HTML Basics</h2>
+            <p>Learn the structure of webpages using HTML.</p>
+            <p><strong>Offered by:</strong> Google</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTllD5B1xwxphMWJUxqbzy1wd8SBxREBV8G2g&s" alt="HTML" width="250" height="200" class="project-img">
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank">Start Course</a>
+        </div>
+
+        <div class="course-card" onclick="showCourseDetails('css')">
+            <h2>CSS Styling</h2>
+            <p>Enhance your webpages with beautiful styles.</p>
+            <p><strong>Offered by:</strong> Coursera</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70HyYb5EpbaNA7x6ywxXMkl4MaCTt83CjLw&s" alt="CSS" width="250" height="200" class="project-img">
+            <a href="https://www.w3schools.com/css/default.asp" target="_blank">Start Course</a>
+        </div>
+
+        <div class="course-card" onclick="showCourseDetails('js')">
+            <h2>JavaScript Essentials</h2>
+            <p>Make your website interactive with JavaScript.</p>
+            <p><strong>Offered by:</strong> Udemy</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2PwRQttmK18ZBYWADrccj8tjjsnIWtDFvqQ&s" alt="JavaScript" width="250" height="200" class="project-img">
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank">Start Course</a>
+        </div>
+
+        <div class="course-card" onclick="showCourseDetails('react')">
+            <h2>React Fundamentals</h2>
+            <p>Build powerful UIs using React.js.</p>
+            <p><strong>Offered by:</strong> Meta (Facebook)</p>
+            <img src="data:image/jpeg;base64,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" alt="React" width="250" height="200" class="project-img">
+            <a href="https://react.dev/learn" target="_blank">Start Course</a>
+        </div>
+
+        <div class="course-card" onclick="showCourseDetails('node')">
+            <h2>Node.js Backend</h2>
+            <p>Learn server-side development with Node.js.</p>
+            <p><strong>Offered by:</strong> Microsoft</p>
+            <img src="https://images.ctfassets.net/aq13lwl6616q/7cS8gBoWulxkWNWEm0FspJ/c7eb42dd82e27279307f8b9fc9b136fa/nodejs_cover_photo_smaller_size.png?w=500&fm=webp" alt="Node.js" width="250" height="200" class="project-img">
+            <a href="https://www.w3schools.com/nodejs/default.asp" target="_blank">Start Course</a>
+        </div>
+
+        <div class="course-card" onclick="showCourseDetails('mongodb')">
+            <h2>MongoDB Basics</h2>
+            <p>Manage data efficiently using MongoDB.</p>
+            <p><strong>Offered by:</strong> MongoDB University</p>
+            <img src="data:image/png;base64,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" alt="MongoDB" width="250" height="200" class="project-img">
+            <a href="https://www.mongodb.com/" target="_blank">Start Course</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 LearnX | Designed by Harsha Kola</p>
+    </footer>
+
+    <!-- Course Details Modal -->
+    <div id="course-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="course-title"></h2>
+            <p id="course-description"></p>
+            <p><strong>Offered by:</strong> <span id="course-company"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
